@@ -18,7 +18,7 @@
         vm.content = "Weather";
 
         vm.selectedCity = "";
-        vm.selectedArrivalICAO = "";
+       
         
 
         
@@ -28,7 +28,7 @@
         
         
 
-        vm.getWeather = function() {
+        vm.getCityWeather = function() {
             
             var lat = vm.selectedCity.cityLat;
             console.log(lat);
@@ -48,7 +48,7 @@
     
         
         //call services
-        vm.getWeather();
+        vm.getCityWeather();
         
 
     }

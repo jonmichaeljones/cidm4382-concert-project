@@ -15,7 +15,7 @@
     var vm = this;
     console.log(window.location);
     
-    vm.content = "Airplane Data";
+    vm.content = "Concert App";
     
     vm.selectedCity = "";
     

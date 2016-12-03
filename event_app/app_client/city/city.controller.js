@@ -4,9 +4,9 @@
     .module('eventApp')
     .controller('cityCtrl', cityCtrl);
 
-  cityCtrl.$inject = ['$scope', 'Location', 'SelectedData'];
+  cityCtrl.$inject = ['$scope', 'LocationsData', 'SelectedData'];
 
-  function airportCtrl($scope, Location, SelectedData) {
+  function cityCtrl($scope, LocationsData, SelectedData) {
     // Nasty IE9 redirect hack (not recommended)
     /*
     if (window.location.pathname !== '/') {
@@ -16,47 +16,26 @@
     
     
     var vm = this;
-    vm.content = "Airport Data";
+    vm.content = "Cities";
     vm.selectedCity = "";
     
-    
     //check selected Departure
-    if(SelectedData.selectedDepartureICAO !== null){
-      vm.selectedDepartureICAO = SelectedData.selectedDepartureICAO;
+    if(SelectedData.selectedCity !== null){
+      vm.selectedCity = SelectedData.selectedCity;
     }
     
-    //check selected Arrival
-    if(SelectedData.selectedArrivalICAO !== null){
-      vm.selectedArrivalICAO = SelectedData.selectedArrivalICAO;
-    }
-    
-    //check selected weight
-    if(SelectedData.selectedWeight !== null){
-      vm.selectedWeight = SelectedData.selectedWeight;
-    }    
 
-    vm.getAirportData = function() {
-      AirportData.getAirports()
+    vm.getLocationsData = function() {
+      LocationsData.getLocations()
         .success(function(data) {
-          vm.airports = data;
-          console.log(vm.airports);
+          vm.locations = data;
+          console.log(vm.locations);
         })
         .error(function(e) {
           console.log(e);
         });
     }
-
-    vm.getClimbData = function() {
-      AirplaneData.getClimbData()
-        .success(function(data) {
-          vm.climbData = data;
-          console.log(vm.climbData);
-        })
-        .error(function(e) {
-          console.log(e);
-        });
-    }
-
+    
     vm.toggleMenu = function() {
       if (vm.class === "toggled") {
         vm.class = "";
@@ -69,59 +48,27 @@
     
     vm.clearSelectedData = function(){
       
-      vm.selectedArrivalICAO = null;
-      vm.selectedDepartureICAO = null;
-      vm.selectedWeight = null;
+      vm.selectedCity = null;
     }
     
     //saved departure
     $scope.$watch(
       function(){
-        return vm.selectedDepartureICAO;    
+        return vm.selectedCity;    
       }, 
       function (newValue, oldValue) {
         console.log(oldValue);
         console.log(newValue);
-        if (newValue.icao !== oldValue.icao){
-          SelectedData.selectedDepartureICAO = newValue;
+        if (newValue.city !== oldValue.city){
+          SelectedData.selectedCity = newValue;
         } 
       }, 
       true
     );
-    
-    //saved arrival
-    $scope.$watch(
-      function(){
-        return vm.selectedArrivalICAO;
-      }, 
-      function (newValue, oldValue) {
-        console.log(oldValue);
-        console.log(newValue);
-        if (newValue.icao !== oldValue.icao){
-          SelectedData.selectedArrivalICAO = newValue;
-        } 
-      }, 
-      true
-    );
-    
-    //saved weight
-    $scope.$watch(
-      function(){
-        return vm.selectedWeight;
-      }, 
-      function (newValue, oldValue) {
-        console.log(oldValue);
-        console.log(newValue);
-        if (newValue.weight !== oldValue.weight){
-          SelectedData.selectedWeight = newValue;
-        } 
-      }, 
-      true
-    );    
+       
 
     //call services
-    vm.getAirportData();
-    vm.getClimbData();
+    vm.getLocationsData();
 
   }
 

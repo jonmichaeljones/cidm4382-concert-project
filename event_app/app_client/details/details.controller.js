@@ -6,7 +6,7 @@
 
     detailsCtrl.$inject = ['$scope', 'SelectedData', 'TicketMaster'];
 
-    function weatherCtrl($scope, SelectedData, TicketMaster) {
+    function detailsCtrl($scope, SelectedData, TicketMaster) {
         // Nasty IE9 redirect hack (not recommended)
         /*
         if (window.location.pathname !== '/') {
@@ -25,7 +25,7 @@
             vm.selectedCity = SelectedData.selectedCity;
         }
         
-
+        /*
         vm.getEventDetails = function() {
             
             var lat = vm.selectedCity.cityLat;
@@ -45,9 +45,9 @@
         
         
         //call services
-        vm.getDepartureWeather();
+        vm.getEventDetails();
         
-
+        */
     }
-
+    
 })();

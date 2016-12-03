@@ -1,7 +1,7 @@
 (function () {
 
   angular
-    .module('airplaneApp')
+    .module('eventApp')
     .directive('sidebar', sideBar);
 
   function sideBar () {

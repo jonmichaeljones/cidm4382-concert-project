@@ -1,7 +1,7 @@
 (function() {
 
     angular
-        .module('airplaneApp')
+        .module('eventApp')
         .factory('KeyStore', keyStore);
 
     keyStore.$inject = ['$http'];

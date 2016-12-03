@@ -2,7 +2,7 @@
 
   angular
     .module('eventApp')
-    .service('locationsData', locationsData);
+    .service('LocationsData', locationsData);
 
   locationsData.$inject = ['$http'];
   function locationsData ($http) {

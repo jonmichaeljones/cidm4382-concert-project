@@ -1,7 +1,7 @@
 (function() {
 
     angular
-        .module('airplaneApp')
+        .module('eventApp')
         .service('DarkskyWeather', darkskyWeather);
 
     darkskyWeather.$inject = ['$http', 'KeyStore'];
