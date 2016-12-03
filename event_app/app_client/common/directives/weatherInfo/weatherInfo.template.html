@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-xs-12">
+      <p class="bg-info">
+        Current Conditions: <br />
+        {{ weather.minutely.icon }}
+        Temperature: {{ weather.currently.temperature }} F <br />
+        Nearest Storm: {{ weather.currently.nearestStormDistance }} F <br />
+        Chance of Rain: {{ weather.currently.precipProbability }} <br />
+        Wind: {{weather.currently.windBearing}} at {{weather.currently.windSpeed}} <br />
+      </p>        
+    </div>
+</div>
