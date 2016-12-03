@@ -1,0 +1,19 @@
+db.locations.save({
+	cityAddress: "2500 Victory Ave",
+	city: "Dallas",
+	state: "Texas",
+	cityZip: 75219,
+	cityLat: 32.791007,
+	cityLong: -96.810447,
+	cityWebsite: "americanairlinescenter.com",
+})
+
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Oklahoma City",
+	state: "Oklohoma",
+	cityZip: 73102,
+	cityLat: 35.463109,
+	cityLong: -97.514805,
+	cityWebsite: "chesapeakearena.com",
+})
