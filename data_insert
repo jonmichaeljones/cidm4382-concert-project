@@ -17,3 +17,12 @@ db.locations.save({
 	cityLong: -97.514805,
 	cityWebsite: "chesapeakearena.com",
 })
+
+
+google api:
+AIzaSyC7gVJAChb0RlJ28kSskbZT6jCCN6KgvS0
+
+ticketmaster:
+consumer-Mv7NCYbJ8sByB1QdoDCulutzK64yBJA1
+secret- gsKIaUSqEhkpTZAR
+https://app.ticketmaster.com/discovery/v2/events.json?postalCode=75219&apikey=Mv7NCYbJ8sByB1QdoDCulutzK64yBJA1

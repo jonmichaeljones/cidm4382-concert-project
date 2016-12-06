@@ -7,12 +7,13 @@
   cityCtrl.$inject = ['$scope', 'LocationsData', 'SelectedData'];
 
   function cityCtrl($scope, LocationsData, SelectedData) {
+    console.log('cityCtrl');
     // Nasty IE9 redirect hack (not recommended)
     /*
     if (window.location.pathname !== '/') {
       window.location.href = '/#' + window.location.pathname;
     }*/
-    console.log(window.location);    
+    console.log(['cityCtrl',window.location]);    
     
     
     var vm = this;

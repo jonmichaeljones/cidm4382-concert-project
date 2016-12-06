@@ -7,6 +7,8 @@
     detailsCtrl.$inject = ['$scope', 'SelectedData', 'TicketMaster'];
 
     function detailsCtrl($scope, SelectedData, TicketMaster) {
+        console.log('detailsCtrl');
+        console.log(['detailsCtrl.SelectedData',SelectedData]);
         // Nasty IE9 redirect hack (not recommended)
         /*
         if (window.location.pathname !== '/') {
@@ -25,15 +27,14 @@
             vm.selectedCity = SelectedData.selectedCity;
         }
         
-        /*
+        
         vm.getEventDetails = function() {
             
-            var lat = vm.selectedCity.cityLat;
-            console.log(lat);
-            var lon = vm.selectedcity.cityLong;
-            console.log(lon);            
+            var city= vm.selectedCity.city;
+            console.log(city);
+                       
 
-            TicketMaster.getEvents(lat, lon)
+            TicketMaster.getEvents(city)
                 .success(function(data) {
                     vm.eventDetails = data;
                     console.log(vm.eventDetails);
@@ -47,7 +48,7 @@
         //call services
         vm.getEventDetails();
         
-        */
+        
     }
     
 })();

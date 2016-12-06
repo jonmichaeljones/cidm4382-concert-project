@@ -7,10 +7,19 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png" height="50px" width="50px"></button>
                     <h1>{{vm.content}}</h1>
                     
+                    <table>
+                        <tbody ng-repeat="x in _array track by $index">
+                        <tr>
+                            <td> {{ x }} </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    
 
-                    <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle">Toggle Menu</button>
+                    
                 </div>
             </div>
             <br>
