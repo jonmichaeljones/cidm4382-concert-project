@@ -4,9 +4,9 @@
         .module('eventApp')
         .controller('directionsCtrl', directionsCtrl);
 
-    directionsCtrl.$inject = ['$scope', 'SelectedData','GoogleMaps'];
+    directionsCtrl.$inject = ['$scope', 'SelectedData', '$sce'];
 
-    function directionsCtrl($scope, SelectedData, GoogleMaps) {
+    function directionsCtrl($scope, SelectedData, $sce) {
         console.log('directionsCtrl');
         console.log(['directions.SelectedData',SelectedData]);
         // Nasty IE9 redirect hack (not recommended)
@@ -27,6 +27,16 @@
             vm.selectedCity = SelectedData.selectedCity;
         }
         
+        
+        
+        $scope.url = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/directions?key=AIzaSyCF2tBQjD5fFY-WnmTaMIjguW7rbWnQqUc&origin=Amarillo&destination=" + vm.selectedCity.city + "&zoom=6");
+        
+        
+        
+        
+
+
+        /*
         vm.getDirectionDetails = function() {
             
             var city = vm.selectedCity.city;
@@ -46,11 +56,11 @@
         
         //call services
         vm.getDirectionDetails();
+        */
         
         
         
-        
-        
-    }
+    }    
+    
     
 })();
