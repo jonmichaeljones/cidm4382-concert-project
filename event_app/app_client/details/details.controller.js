@@ -2,8 +2,9 @@
 
     angular
         .module('eventApp')
-        .controller('detailsCtrl', detailsCtrl);
-
+        .controller('detailsCtrl', detailsCtrl)
+    
+        
     detailsCtrl.$inject = ['$scope', 'SelectedData', 'TicketMaster'];
 
     function detailsCtrl($scope, SelectedData, TicketMaster) {
@@ -20,6 +21,7 @@
         vm.content = "Details";
 
         vm.selectedcity = "";
+        
         
 
         //check selected Departure

@@ -1,13 +1,13 @@
 <div ng-repeat="event in events._embedded.events" class="row">
     <div class="col-xs-12">
-      <p class="bg-info">
+      <p>
         <img src="{{ event.images[3].url }}" width="360" height="203"><br>
         Event Name: {{event.name}} <br />
         Event Address: {{ event._embedded.venues[0].address.line1 }} <br />
         Event Location: {{ event._embedded.venues[0].name }} <br />
-        Event Time: {{ event.dates.start.localTime }} <br />
+        Event Time: </span>{{ event.dates.start.localTime | moment}}</span><br />
         Event City: {{ event._embedded.venues[0].city.name }} <br />
-        <a href="{{ event.sales.url }}" target="blank">Get Tickets</a>
+        <a ng-href="{{ event.url }}" target="blank">Get Tickets</a>
         <br />
       </p>        
     </div>
