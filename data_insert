@@ -18,6 +18,55 @@ db.locations.save({
 	cityWebsite: "chesapeakearena.com",
 })
 
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Tulsa",
+	state: "Oklahoma",
+	cityZip: 74105,
+	cityLat: 36.175812,
+	cityLong: -95.872553,
+	cityWebsite: "www.cityoftulsa.org",
+})
+
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Denver",
+	state: "Colorado",
+	cityZip: 80204,
+	cityLat: 39.836659,
+	cityLong: -104.974169,
+	cityWebsite: "www.denver.org",
+})
+
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Colorado Springs",
+	state: "Colorado",
+	cityZip: 80904,
+	cityLat: 38.848600,
+	cityLong: -104.816733,
+	cityWebsite: "www.visitcos.com",
+})
+
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Houston",
+	state: "Texas",
+	cityZip: 80904,
+	cityLat: 29.742627,
+	cityLong: -95.333474,
+	cityWebsite: "https://www.visithoustontexas.com/",
+})
+
+db.locations.save({
+	cityAddress: "100 W Reno Ave",
+	city: "Austin",
+	state: "Texas",
+	cityZip: 78073,
+	cityLat: 30.278411,
+	cityLong: -97.738334,
+	cityWebsite: "www.austintexas.org",
+})
 
 google api:
 AIzaSyC7gVJAChb0RlJ28kSskbZT6jCCN6KgvS0

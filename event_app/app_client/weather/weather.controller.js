@@ -4,9 +4,9 @@
         .module('eventApp')
         .controller('weatherCtrl', weatherCtrl);
 
-    weatherCtrl.$inject = ['$scope', 'SelectedData', 'DarkskyWeather'];
+    weatherCtrl.$inject = ['$scope', 'SelectedData', 'DarkskyWeather','LocationsData'];
 
-    function weatherCtrl($scope, SelectedData, DarkskyWeather) {
+    function weatherCtrl($scope, SelectedData, DarkskyWeather, LocationsData) {
         // Nasty IE9 redirect hack (not recommended)
         /*
         if (window.location.pathname !== '/') {
@@ -50,7 +50,54 @@
         //call services
         vm.getCityWeather();
         
-
-    }
+        vm.getLocationsData = function() {
+          LocationsData.getLocations()
+            .success(function(data) {
+              vm.locations = data;
+              console.log(vm.locations);
+            })
+            .error(function(e) {
+              console.log(e);
+            });
+        }
+        
+        vm.toggleMenu = function() {
+          if (vm.class === "toggled") {
+            vm.class = "";
+          }
+          else {
+            vm.class = "toggled";
+          }
+          console.log(vm.class + " is good");
+        };
+        
+        vm.clearSelectedData = function(){
+          
+          vm.selectedCity = null;
+        }
+        
+        //saved departure
+        $scope.$watch(
+          function(){
+            return vm.selectedCity;    
+          }, 
+          function (newValue, oldValue) {
+            console.log(oldValue);
+            console.log(newValue);
+            if (newValue.city !== oldValue.city){
+              SelectedData.selectedCity = newValue;
+            } 
+          }, 
+          true
+        );
+           
+    
+        //call services
+        vm.getLocationsData();
+    
+      
+            
+        }
+    
 
 })();

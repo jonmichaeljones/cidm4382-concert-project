@@ -8,8 +8,8 @@
     
     $routeProvider
       .when('/', {
-        templateUrl: '/home/home.view.html',
-        controller: 'homeCtrl',
+        templateUrl: '/city/city.view.html',
+        controller: 'cityCtrl',
         controllerAs: 'vm'
       })
       .when('/directions/', {

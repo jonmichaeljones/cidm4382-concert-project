@@ -2,11 +2,12 @@
     <div class="col-xs-12">
       <p>
         Current Conditions: {{ weather.minutely.icon }} <br />
-        
-        Temperature: {{ weather.currently.temperature }} F <br />
-        Nearest Storm: {{ weather.currently.nearestStormDistance }} miles <br />
-        Chance of Rain: {{ weather.currently.precipProbability }}% <br />
-        Wind: {{weather.currently.windBearing}} at {{weather.currently.windSpeed}} MPH <br />
+        <ul>
+          <li>Temperature: {{ weather.currently.temperature }}F </li>
+          <li>Nearest Storm: {{ weather.currently.nearestStormDistance }} miles</li>
+          <li>Chance of Rain: {{ weather.currently.precipProbability }}%</li>
+          <li>Wind: {{weather.currently.windSpeed}} MPH </li>
+        </ul>
       </p>        
     </div>
 </div>
