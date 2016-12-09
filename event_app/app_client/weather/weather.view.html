@@ -5,10 +5,73 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
+            
+            <div class="fullscreen-bg-pic">
+                
+                <img src="https://farm1.staticflickr.com/649/30725539263_af44154cae_h.jpg">
+                    
+            </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png" height="50px" width="50px"></button>
-                    <h1>{{vm.content}}</h1>
+                    
+                    <img class="logo-centered" src="../images/web_logo.png" widhth="150px" height="150px">
+                    <button type="button" class="btn btn-default btn-link" id="menu-toggle" ng-model="vm.toggle" ng-click="vm.toggle=!vm.toggle"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/220px-Hamburger_icon.svg.png" height="25px" width="25px"></button>
+                    
+                    
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    
+                    
+                
+                    
+                            
+                    
+                    <div class="center2">
+                    
+                        <form novalidate class="form-inline">
+                            <div class="form-group">
+                                
+                                
+                                <select id="selectCity" 
+                                        class="form-control2"
+                                        ng-model="vm.selectedCity" 
+                                        ng-options="loc.city for loc in vm.locations"
+                                        value="Select Your City">
+                                        <option value="" disabled selected>Change Your City</option>
+                                </select>
+                                    
+                            </div>
+                              
+                            <a class="btn btn-success btn-lg" href="/details">Let's Rock</a> 
+                                                        
+                        </form>
+                    </div>
+                    
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br> </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    
+                    
+                        
+                        </br>
+                        
+                        <h3>Weather Today in {{vm.selectedCity.city}}</h3>
+         
                         
                         <weather-info info="vm.cityWeather"></weather-info>
                         
