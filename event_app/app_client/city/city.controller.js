@@ -17,6 +17,7 @@
     
     
     var vm = this;
+    vm.toggle = true;
     vm.content = "Cities";
     vm.selectedCity = "";
     

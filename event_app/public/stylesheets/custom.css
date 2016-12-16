@@ -1,10 +1,10 @@
 #sidebar-wrapper {
-    color: #1c123a;
-    background: #1c123a;
+    color: #000000;
+    background: #000000;
 }
 .sidebar-nav {
-    color: #1c123a;
-    background: #1c123a;
+    color: #000000;
+    background: #000000;
 }
 
 .angular-google-map-container { height: 400px; }
@@ -34,7 +34,7 @@ select {
 
 .form-control2 {
   display: block;
-  width: 350px;
+  width: 250px;
   height: 47px;
   padding: 6px 12px;
   font-size: 14px;
@@ -54,7 +54,7 @@ select {
 
 .form-control3 {
   display: block;
-  width: 350px;
+  width: 250px;
   height: 30px;
   padding: 6px 12px;
   font-size: 14px;

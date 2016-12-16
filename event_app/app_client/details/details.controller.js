@@ -16,6 +16,7 @@
           window.location.href = '/#' + window.location.pathname;
         }*/
         var vm = this;
+        vm.toggle = true;
         console.log(window.location);
 
         vm.content = "Details";
