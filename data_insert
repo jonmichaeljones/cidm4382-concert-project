@@ -58,13 +58,4 @@ db.locations.save({
 	cityWebsite: "https://www.visithoustontexas.com/",
 })
 
-db.locations.save({
-	cityAddress: "100 W Reno Ave",
-	city: "Austin",
-	state: "Texas",
-	cityZip: 78073,
-	cityLat: 30.278411,
-	cityLong: -97.738334,
-	cityWebsite: "www.austintexas.org",
-})
 
