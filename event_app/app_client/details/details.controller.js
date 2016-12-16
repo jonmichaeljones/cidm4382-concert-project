@@ -25,12 +25,12 @@
         
         
 
-        //check selected Departure
+        //check selected City
         if (SelectedData.selectedCity !== null) {
             vm.selectedCity = SelectedData.selectedCity;
         }
         
-        
+        //read api from ticketmaster
         vm.getEventDetails = function() {
             
             var city= vm.selectedCity.city;
@@ -77,7 +77,7 @@
           vm.selectedCity = null;
         }
         
-        //saved departure
+        //saved city
         $scope.$watch(
           function(){
             return vm.selectedCity;    

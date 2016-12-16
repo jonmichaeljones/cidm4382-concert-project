@@ -23,13 +23,13 @@
         vm.selectedcity = "";
         
 
-        //check selected Departure
+        //check selected city
         if (SelectedData.selectedCity !== null) {
             vm.selectedCity = SelectedData.selectedCity;
         }
         
         
-        
+        //trust google embbeded link past as html
         $scope.url = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/directions?key=AIzaSyCF2tBQjD5fFY-WnmTaMIjguW7rbWnQqUc&origin=Amarillo&destination=" + vm.selectedCity.city + "&zoom=6");
         
         vm.getLocationsData = function() {
@@ -58,7 +58,7 @@
           vm.selectedCity = null;
         }
         
-        //saved departure
+        //saved city
         $scope.$watch(
           function(){
             return vm.selectedCity;    

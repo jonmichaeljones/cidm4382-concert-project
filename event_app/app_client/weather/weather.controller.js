@@ -28,7 +28,7 @@
         }
         
         
-
+        //read weather api
         vm.getCityWeather = function() {
             
             var lat = vm.selectedCity.cityLat;
@@ -77,7 +77,7 @@
           vm.selectedCity = null;
         }
         
-        //saved departure
+        //saved city
         $scope.$watch(
           function(){
             return vm.selectedCity;    

@@ -26,7 +26,7 @@
       vm.selectedCity = SelectedData.selectedCity;
     }
     
-
+    //read locations from own api
     vm.getLocationsData = function() {
       LocationsData.getLocations()
         .success(function(data) {
@@ -37,6 +37,7 @@
           console.log(e);
         });
     }
+    
     
     vm.toggleMenu = function() {
       if (vm.class === "toggled") {
@@ -53,7 +54,7 @@
       vm.selectedCity = null;
     }
     
-    //saved departure
+    //saved city
     $scope.$watch(
       function(){
         return vm.selectedCity;    
